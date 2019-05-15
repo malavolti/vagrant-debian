@@ -75,9 +75,9 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     export DEBIAN_FRONTEND=noninteractive
-    apt update
-    apt upgrade --yes
-    apt install --yes vim git build-essential bash-completion dnsutils --no-install-recommends
+    apt-get update
+    apt-get upgrade --yes
+    apt-get install --yes vim git build-essential bash-completion dnsutils --no-install-recommends
     sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
     printf "\nif [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi" >> /etc/profile
   SHELL
