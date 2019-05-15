@@ -18,6 +18,7 @@
 5. Run "`vagrant up`" command to instance the Development Environment.
 6. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the `vagrant-debian` directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
 7. Run "`vagrant ssh`" to access the VM created.
+8. The virtual machine will have the IP: 192.168.33.10 (See Vagrantfile to change it)
 
 ## Istructions for MacOSX
 1. Retrieve GIT Repository:
@@ -30,6 +31,7 @@
 5. Run "`vagrant up`" command to instance the Development Environment.
 6. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the Vagrant directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
 7. Run "`vagrant ssh`" to access the VM created.
+8. The virtual machine will have the IP: 192.168.33.10 (See Vagrantfile to change it)
    
 ## Istructions for Windows
 1. Download the Repository from: https://github.com/malavolti/vagrant-debian/archive/master.zip
@@ -40,6 +42,7 @@
 6. Run "`vagrant up`" command to instance the Development Environment.
 7. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the Vagrant directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
 8. Run "`vagrant ssh`" to access the VM created.
+9. The virtual machine will have the IP: 192.168.33.10 (See Vagrantfile to change it)
 
 ## Useful Commands (to use inside 'vagrant-debian' dir)
 1. To shutdown the Development Environment use "`vagrant halt`" within the "`cmd`" prompt (Windows) or terminal (Linux/OSX)
