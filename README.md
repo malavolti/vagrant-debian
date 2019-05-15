@@ -16,7 +16,7 @@
 3. Install the Virtualbox Guest Additions with "`vagrant plugin install vagrant-vbguest`"
 4. Install the Vagrant plugin to resize hard disk: "`vagrant plugin install vagrant-disksize`"
 5. Run "`vagrant up`" command to instance the Development Environment.
-6. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the `vagrant-debian` directory inside VM and monitor changes with the log file.
+6. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the `vagrant-debian` directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
 7. Run "`vagrant ssh`" to access the VM created.
 
 ## Istructions for MacOSX
@@ -28,7 +28,7 @@
 3. Install the VirtualBox Guest Additions with "`vagrant plugin install vagrant-vbguest`"
 4. Install the Vagrant plugin to resize hard disk: "`vagrant plugin install vagrant-disksize`"
 5. Run "`vagrant up`" command to instance the Development Environment.
-6. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the Vagrant directory inside VM and monitor changes with the log file.
+6. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the Vagrant directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
 7. Run "`vagrant ssh`" to access the VM created.
    
 ## Istructions for Windows
@@ -38,7 +38,7 @@
 4. Install the VirtualBox Guest Additions with "`vagrant plugin install vagrant-vbguest`"
 5. Install the Vagrant plugin to resize hard disk: "`vagrant plugin install vagrant-disksize`"
 6. Run "`vagrant up`" command to instance the Development Environment.
-7. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the Vagrant directory inside VM and monitor changes with the log file.
+7. Run "`vagrant rsync-auto > rsync-auto.log 2>&1 &`" to maintain synced the Vagrant directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
 8. Run "`vagrant ssh`" to access the VM created.
 
 ## Useful Commands (to use inside 'vagrant-debian' dir)
