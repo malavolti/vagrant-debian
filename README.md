@@ -15,7 +15,7 @@
    * `cd /opt/vagrant-debian`
 3. Install Vagrant & LibVirt:
    * `sudo apt-get build-dep vagrant ruby-libvirt`
-   * `sudo apt-get install -y qemu libvirt-daemon-system ebtables libguestfs-tools libxslt-dev libxml2-dev zlib1g-dev ruby-dev`
+   * `sudo apt-get install -y libvirt-daemon-system ebtables libguestfs-tools libxslt1-dev libxml2-dev zlib1g-dev ruby-dev`
    * `sudo apt-get install -y vagrant`
    * `vagrant plugin install vagrant-libvirt`   
 4. Install the Vagrant plugin to resize hard disk: `vagrant plugin install vagrant-disksize`
