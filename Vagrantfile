@@ -10,9 +10,12 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+  # VM hostname
+  # https://developer.hashicorp.com/vagrant/docs/networking/basic_usage
+  config.vm.hostname = "vm.local"
+
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  #config.vm.box = "base"
   config.vm.box = "debian/bookworm64"
 
   # Disable automatic box update checking. If you disable this, then
@@ -30,11 +33,12 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
+  # https://developer.hashicorp.com/vagrant/docs/networking/basic_usage
   # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10", hostname: true
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -45,23 +49,8 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "./share_data", "/vagrant_data"
 
-  # Provider-specific configuration so you can fine-tune various
-  # backing providers for Vagrant. These expose provider-specific options.
-  # Example for VirtualBox:
-  #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vm.cpus = 2
-  #   vb.memory = "1024"
-  # end
-  #
-  # View the documentation for the provider you are using for more
-  # information on available options.
   config.vm.provider :libvirt do |vm|
     vm.cpus = 2
     vm.memory = 1024
@@ -77,9 +66,6 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
     apt-get upgrade --yes
-    apt-get install --yes vim git build-essential bash-completion dnsutils --no-install-recommends
-    sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
-    printf "\nif [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi" >> /etc/profile
   SHELL
 
 end
