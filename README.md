@@ -20,8 +20,11 @@
    * `curl -O https://raw.githubusercontent.com/vagrant-libvirt/vagrant-libvirt-qa/main/scripts/install.bash`
    * `chmod a+x ./install.bash`
    * `./install.bash`
-4. Run `vagrant up` command to instance the Development Environment.
-5. Run `vagrant ssh` to access the VM created.
+Disable run at boot for `dnsmasq` service by:
+   * for SYSV init use: `update-rc.d dnsmasq disable`
+   * for systemd use: `systemctl disable dnsmasq`
+5. Run `vagrant up` command to instance the Development Environment.
+6. Run `vagrant ssh` to access the VM created.
 
 ## Istructions for MacOSX
 1. Retrieve GIT Repository:
