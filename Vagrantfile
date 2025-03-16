@@ -1,10 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -14,13 +10,11 @@ Vagrant.configure("2") do |config|
   # https://developer.hashicorp.com/vagrant/docs/networking/basic_usage
   config.vm.hostname = "vm.local"
 
-  # Every Vagrant development environment requires a box. You can search for
-  # boxes at https://vagrantcloud.com/search.
+  # Every Vagrant development environment requires a box. 
+  # You can search for boxes at https://vagrantcloud.com/search.
   config.vm.box = "debian/bookworm64"
 
-  # Disable automatic box update checking. If you disable this, then
-  # boxes will only be checked for updates when the user runs
-  # `vagrant box outdated`. This is not recommended.
+  # Enable automatic box update checking. This is recommended.
   config.vm.box_check_update = true
 
   # Create a forwarded port mapping which allows access to a specific port
@@ -38,18 +32,14 @@ Vagrant.configure("2") do |config|
   # using a specific IP.
   # https://developer.hashicorp.com/vagrant/docs/networking/basic_usage
   # config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.network "private_network", ip: "192.168.33.10", hostname: true
+  # config.vm.network "private_network", ip: "192.168.33.10", hostname: true
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
 
-  # Share an additional folder to the guest VM. The first argument is
-  # the path on the host to the actual folder. The second argument is
-  # the path on the guest to mount the folder. And the optional third
-  # argument is a set of non-required options.
-  config.vm.synced_folder "./share_data", "/vagrant_data"
+  # Data will be shared by the /vagrant VM directory
 
   config.vm.provider :libvirt do |vm|
     vm.cpus = 2
