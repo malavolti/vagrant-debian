@@ -20,7 +20,7 @@
    * `curl -O https://raw.githubusercontent.com/vagrant-libvirt/vagrant-libvirt-qa/main/scripts/install.bash`
    * `chmod a+x ./install.bash`
    * `./install.bash`
-Disable run at boot for `dnsmasq` service by:
+4. Disable run at boot for `dnsmasq` service by:
    * for SYSV init use: `update-rc.d dnsmasq disable`
    * for systemd use: `systemctl disable dnsmasq`
 5. Run `vagrant up` command to instance the Development Environment.
