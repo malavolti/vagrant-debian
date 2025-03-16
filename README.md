@@ -5,6 +5,8 @@
 * Virtualbox: https://www.virtualbox.org/wiki/Downloads
 
 ## Istructions for Linux
+* LibVirt: https://vagrant-libvirt.github.io/vagrant-libvirt/
+
 1. Retrieve GIT Repository:
    * `sudo su -`
    * `apt install git`
@@ -14,13 +16,12 @@
 2. Move on the `vagrant-debian` directory extracted.
    * `cd /opt/vagrant-debian`
 3. Install Vagrant & LibVirt:
-   * `sudo apt-get build-dep vagrant ruby-libvirt`
-   * `sudo apt-get install -y libvirt-daemon-system ebtables libguestfs-tools libxslt1-dev libxml2-dev zlib1g-dev ruby-dev`
-   * `sudo apt-get install -y vagrant`
-   * `vagrant plugin install vagrant-libvirt`
+   * `cd $HOME`
+   * `curl -O https://raw.githubusercontent.com/vagrant-libvirt/vagrant-libvirt-qa/main/scripts/install.bash`
+   * `chmod a+x ./install.bash`
+   * `./install.bash`
 4. Run `vagrant up` command to instance the Development Environment.
 5. Run `vagrant ssh` to access the VM created.
-6. The virtual machine will have the IP: 192.168.33.10 (See Vagrantfile to change it)
 
 ## Istructions for MacOSX
 1. Retrieve GIT Repository:
