@@ -17,12 +17,10 @@
    * `sudo apt-get build-dep vagrant ruby-libvirt`
    * `sudo apt-get install -y libvirt-daemon-system ebtables libguestfs-tools libxslt1-dev libxml2-dev zlib1g-dev ruby-dev`
    * `sudo apt-get install -y vagrant`
-   * `vagrant plugin install vagrant-libvirt`   
-4. Install the Vagrant plugin to resize hard disk: `vagrant plugin install vagrant-disksize`
-5. Run `vagrant up` command to instance the Development Environment.
-6. Run `vagrant rsync-auto > rsync-auto.log 2>&1 &` to maintain synced the `vagrant-debian` directory inside VM and monitor changes with the log file. Put your files into `share-data` dir to transfer them into `/vagrant/share-data` dir inside the VM.
-7. Run "`vagrant ssh`" to access the VM created.
-8. The virtual machine will have the IP: 192.168.33.10 (See Vagrantfile to change it)
+   * `vagrant plugin install vagrant-libvirt`
+4. Run `vagrant up` command to instance the Development Environment.
+5. Run `vagrant ssh` to access the VM created.
+6. The virtual machine will have the IP: 192.168.33.10 (See Vagrantfile to change it)
 
 ## Istructions for MacOSX
 1. Retrieve GIT Repository:
